@@ -1,0 +1,19 @@
+<div class="wholeFeatures">
+    <div class="card">
+        <form>
+            <h2>Administrator Login</h2>
+            <img src="../../../assets/icon.png" style="width: 200px; height: 250;">
+            <div class="input-container">
+              <i class="fa fa-user icon"></i>
+              <input class="input-field" type="text" placeholder="Username" [(ngModel)]="usernameAndPassword.username" name="usrnm">
+            </div>
+    
+            <div class="input-container">
+              <i class="fa fa-key icon"></i>
+              <input class="input-field" type="password" placeholder="Password" [(ngModel)]="usernameAndPassword.password" name="psw">
+            </div>
+          
+            <button type="submit" class="btn" (click)="login()">Register</button>
+          </form><br><br>
+    </div>
+</div>

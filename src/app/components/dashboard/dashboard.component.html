@@ -1,0 +1,91 @@
+<div>
+    <div class="mat-elevation-z8">
+        <div class="content">
+            <mat-form-field>
+                <mat-label>Search</mat-label>
+                <input matInput (keyup)="applyFilter($event)" #input>
+            </mat-form-field>
+            <div class="example-container mat-elevation-z8">
+                <table mat-table [dataSource]="dataSource">
+
+                    <!-- Name Column -->
+                    <ng-container matColumnDef="name" sticky>
+                        <th mat-header-cell *matHeaderCellDef> Name </th>
+                        <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+                    </ng-container>
+
+                    <!-- Position Column -->
+                    <ng-container matColumnDef="email">
+                        <th mat-header-cell *matHeaderCellDef> Email </th>
+                        <td mat-cell *matCellDef="let element"> {{element.email}} </td>
+                    </ng-container>
+
+                    <!-- Weight Column -->
+                    <ng-container matColumnDef="phone">
+                        <th mat-header-cell *matHeaderCellDef> Phone </th>
+                        <td mat-cell *matCellDef="let element"> {{element.phone}} </td>
+                    </ng-container>
+
+                    <!-- Symbol Column -->
+                    <ng-container matColumnDef="address">
+                        <th mat-header-cell *matHeaderCellDef> Address </th>
+                        <td mat-cell *matCellDef="let element"> {{element.address}} </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="primarynum">
+                        <th mat-header-cell *matHeaderCellDef> Primary ID Number </th>
+                        <td mat-cell *matCellDef="let element"> {{element.primaryIdNum}} </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="view">
+                        <th mat-header-cell *matHeaderCellDef> User_Profile_Image </th>
+                        <td mat-cell *matCellDef="let element"> <img [src]="element.selfie"
+                                (click)="viewImage(element.selfie, element)"> </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="bday">
+                        <th mat-header-cell *matHeaderCellDef> Birthday </th>
+                        <td mat-cell *matCellDef="let element"> {{element.bday}} </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="activate">
+                        <th mat-header-cell *matHeaderCellDef> Activate </th>
+                        <td mat-cell *matCellDef="let element"> <img style="width: 30px; height: 30px;"
+                                src="../../../assets/buttons/activate.png"
+                                (click)="blockCertainUser(element, 'activate')"> </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="suspend">
+                        <th mat-header-cell *matHeaderCellDef> Suspend </th>
+                        <td mat-cell *matCellDef="let element"> <img style="width: 30px; height: 30px;"
+                                src="../../../assets//buttons/suspend.png"
+                                (click)="blockCertainUser(element, 'suspend')"> </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="block">
+                        <th mat-header-cell *matHeaderCellDef> Block </th>
+                        <td mat-cell *matCellDef="let element"> <img style="width: 30px; height: 30px;"
+                                src="../../../assets/buttons/block.png" (click)="blockCertainUser(element, 'block')">
+                        </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="credits">
+                        <th mat-header-cell *matHeaderCellDef> Add Credits </th>
+                        <td mat-cell *matCellDef="let element"> <button (click)="addCredits(element)"
+                                class="button w3-button w3-xlarge w3-circle w3-black">+</button> </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="deduct">
+                        <th mat-header-cell *matHeaderCellDef> Dedeuct Credits </th>
+                        <td mat-cell *matCellDef="let element"> <button (click)="deductCredits(element)"
+                                class="button w3-button w3-xlarge w3-circle w3-black">-</button> </td>
+                    </ng-container>
+
+                    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                </table>
+            </div>
+        </div>
+        <mat-paginator [pageSizeOptions]="[5,10,15]" showFirstLastButtons></mat-paginator>
+    </div>
+</div>

@@ -1,0 +1,25 @@
+table {
+    width: 90%;
+    height: 500px;
+    margin-right: auto;
+    margin-left: auto;
+    /* display: block; */
+}
+
+.mat-form-field {
+    font-size: 14px;
+    width: 20%;
+    margin-left: 5%;
+    margin-top: 3%;
+}
+
+mat-paginator {
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+
+/* .content {
+    margin-top: 3%;
+} */

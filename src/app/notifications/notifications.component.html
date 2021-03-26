@@ -1,0 +1,14 @@
+<div class="w3-container">
+    <div class="content">
+        <table class="w3-table w3-bordered w3-card-4">
+            <tr>
+                <th>Artisan's Name</th>
+                <th>Money Received </th>
+            </tr>
+            <tr *ngFor="let value of transactions">
+                <td> {{value.user.name }} </td>
+                <td>{{ value.cost }}</td>
+            </tr>
+        </table>
+    </div>
+</div>
