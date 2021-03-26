@@ -6,10 +6,10 @@ import { HttpClient } from '@angular/common/http'
   providedIn: 'root'
 })
 export class AccessDataService {
-  public url = 'http://localhost:8080/';
+  public url = 'https://msqadmin.herokuapp.com/';
 
   //This url is used for having relationship with the api
-  public uri  = 'http://localhost:8080/api/';
+  public uri  = 'https://msqadmin.herokuapp.com/api/';
 
   constructor(
     private http: HttpClient
