@@ -21,7 +21,7 @@ public usersData: any;
   
 
   ngOnInit(): void {
-    console.log('coasdf')
+    //console.log('coasdf')
   }
 
   // succesAlert(Text, Icon, Timer): void {
@@ -34,7 +34,7 @@ public usersData: any;
   //   });
   // }
   suspendSelectedItem(customers: any) {
-    console.log("Misud siya ariii....", "Customers: " ,customers);
+    //console.log("Misud siya ariii....", "Customers: " ,customers);
     
     this.usersData.splice(this.usersData.indexOf(customers), 1)
     Swal.fire({

@@ -1,11 +1,25 @@
-<mat-tab-group mat-align-tabs="start">
-    <mat-tab label="ARTISAN">
-        <app-dashboard></app-dashboard>
-    </mat-tab>
-    <mat-tab label="CUSTOMER">
-        <app-customer></app-customer>
-    </mat-tab>
-    <mat-tab label="NOTIFICATIONS">
-        <app-notifications></app-notifications>
-    </mat-tab>
-</mat-tab-group>
+
+<div>
+    <mat-toolbar  color="primary">
+        <div>
+            <img src="../../../assets/logo.jpg" style="height: 50px; width: 50px; border-radius: 50%; margin-right: 10px;"/>
+        </div>
+        <span class="title">Ms. Q Associates Admin</span>
+        <span class="example-spacer"></span>
+        <button mat-stroked-button  class="example-icon favorite-icon"  (click)="logout()">Logout</button>
+      </mat-toolbar>
+   
+</div>
+<div>
+    <mat-tab-group mat-align-tabs="start">
+        <mat-tab label="ARTISAN">
+            <app-dashboard></app-dashboard>
+        </mat-tab>
+        <mat-tab label="CUSTOMER">
+            <app-customer></app-customer>
+        </mat-tab>
+        <mat-tab label="NOTIFICATIONS">
+            <app-notifications></app-notifications>
+        </mat-tab>
+    </mat-tab-group>
+</div>

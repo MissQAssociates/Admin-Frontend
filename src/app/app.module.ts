@@ -22,6 +22,9 @@ import {MatDialogModule} from '@angular/material/dialog';
 import {MatButtonModule} from '@angular/material/button';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatIconModule} from '@angular/material/icon';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatCardModule} from '@angular/material/card';
+
 import { NotificationsComponent } from './notifications/notifications.component';
 
 
@@ -48,7 +51,9 @@ import { NotificationsComponent } from './notifications/notifications.component'
     MatDialogModule,
     MatButtonModule,
     MatPaginatorModule,
-    MatIconModule
+    MatIconModule,
+    MatToolbarModule,
+    MatCardModule
     // MAT_DIALOG_DATA
   ],
   providers: [MatPaginatorModule],
